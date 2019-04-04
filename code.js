@@ -93,7 +93,7 @@ var drawScatterplot = function (data) {
 		return changearray
 	}
 
-	var penArray = ["Bookworm", "Crafty", "Cyclist", "Drunken", "Easter", "EBook", "Farmer", "Gentleman", "Judo", "Moana", "Painter", "Grill", "Pharaoh", "Pilot", "Pinga", "Pixie", "Sailor", "Santa", "Tauch", "Tux", "ValentineOcal", "Valentine", "Wizard"]
+	var penArray = ["bookworm", "crafty", "cyclist", "drunken", "easter", "ebook", "Ffarmer", "gentleman", "judo", "moana", "painter", "grill", "pharaoh", "pilot", "pinga", "pixie", "sailor", "santa", "tauch", "tux", "valentineocal", "valentine", "wizard"]
 
 	var addlabels = function (c, p) {
 		var newarray = c.map(function (d, i) {
