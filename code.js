@@ -117,7 +117,7 @@ chart.selectAll("circle")
 		 .append("circle")
 		 .attr("cx", function(d,i){return xScale(i+1)})
 		 .attr("cy", function(d){return yScale(d.change)})
-		 .attr("r", 20)
+		 .attr("r", 15)
 		 .attr("fill", function (d, i) {
 				return colorScale(i);
 			})
