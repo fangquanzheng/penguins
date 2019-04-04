@@ -1,7 +1,7 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>Histogram - Each Day</title>
+		<title>Penguins</title>
 		<script type="text/javascript" src="d3.js"></script>
 	</head>
 	<body>
@@ -21,7 +21,7 @@
 				width: 90px;
 				height: 20px;
 				padding: 2px;
-				background-color: white;
+				background-color: rgba(0, 0, 0, 0.6);
 				-webkit-border-radius: 10px;
 				-moz-border-radius: 10px;
 				border-radius: 10px;
@@ -29,7 +29,7 @@
 				-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
 				box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
 				pointer-events: none;
-				color: green;
+				color: white;
 			}
 			#tooltip.hidden {
 			display: none;
@@ -51,10 +51,8 @@
 			font-size: 20px;
 			}
 		</style>
-		<script type="text/javascript" src="code.js"></script>
-		<!-- <script type = "text/javascript" src="percentage.js"></script> -->
+		<script type="text/javascript" src="final.js"></script>
 		<div><svg id="dotchart"></svg></div>
-		<!-- <svg id="piechart"></svg> -->
 		<div id="tooltip" class="hidden">
 			<p><strong><span id="value"></span></strong></p>
 		</div>
