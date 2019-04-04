@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|ZCOOL+XiaoWei');
+body {
+    font-family: 'ZCOOL XiaoWei', serif;  
+}
+
+.line {
+    stroke:slateblue;
+    stroke-width: 4;
+    fill: none;
+}
+
+.xAxis {
+    stroke:black;
+    fill: none;
+    shape-rendering: crispedges;
+    stroke-width: 1;
+
+}
+
+.yAxis {
+    stroke: black;
+    fill: none;
+    shape-rendering: crispedges;
+    stroke-width: 1;
+}
