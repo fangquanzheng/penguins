@@ -127,7 +127,7 @@ chart.selectAll("circle")
 							.style("left", xScale(i+1) + "px")
 							.style("top", yScale(d.change) + "px")
 							.select("#value")
-							.text(d.penguin + "</br>" + d.change + "%")
+							.html(d.penguin + "</br>" + d.change)
 
 						d3.select("#tooltip").classed("hidden", false);
 
