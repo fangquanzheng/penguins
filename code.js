@@ -68,7 +68,7 @@ var getFgradeArray=function(d){
 	return changearray
  }
 
-var penArray=["bookworm","crafty","cyclist","drunken","easter","ebook","farmer","gentleman","judo","moana","painter","grill","pharoh","pilot","pinga","pixie","sailor","santa","tauch","tux","valentineocal","valentine","wizard"]
+var penArray=["bookworm","crafty","cyclist","drunken","easter","ebook","farmer","gentleman","judo","moana","painter","grill","pharaoh","pilot","pinga","pixie","sailor","santa","tauch","tux","valentineocal","valentine","wizard"]
  
 var addlabels = function(c,p){
  var newarray = c.map(function(d,i){
