@@ -47,7 +47,7 @@ var getFgradeArray=function(d){
 					return hws = date/2;}
 				if (date >= 30) {
 					return hws = date-2/2;}
-			 
+		}
 			else {
 			  if (date < 30) {
 			  	return hws = date-1/2;}
@@ -107,10 +107,10 @@ var getFgradeArray=function(d){
 	 	var finalgrade1 = finalarray.reduce(function(total, amount){
 		 return total + amount})
 		var finalgrade = (finalgrade1/(final*100))*100
-		var stugrade = ((0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division)
-		return stugrade}
+		var stugrade = (0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division
+		return stugrade})
 	return HgradeArray 
- })
+ }
  
  var getGradechange=function(f,h){
 	var changearray = h.map(function(d,i){
