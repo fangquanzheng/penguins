@@ -42,7 +42,7 @@ var getFgradeArray=function(d){
 
  var getHgradeArray=function(d,date){
 	var HgradeArray = d.map(function(student){
-		var hws = function() { if (date % 2 == 0) {
+		var hws = function(){ if (date % 2 == 0) {
  			 	if (date < 30) {
 					return hws = date/2;}
 				if (date >= 30) {
@@ -55,7 +55,7 @@ var getFgradeArray=function(d){
 			  	return hws = date-3/2;}
 			}
 				     };
-		var qzs =  function() { if (date < 15) {
+		var qzs =  function(){ if (date < 15) {
 				return qzs = date;}
 			  if (date >= 15 && date < 30) {
 			  	return qzs = date-1;}
@@ -64,19 +64,19 @@ var getFgradeArray=function(d){
 			  if (date == 41) {
 			  	return qzs = date-3;}
 				      };
-		var tests = function() { if (date < 15) {
+		var tests = function(){ if (date < 15) {
 				return tests = 0;}
 			    if (date >= 15 && date < 30) {
 			    	return tests = 1;}
 			    if (date >= 30) {
 			    	 return tests = 2;}
 					};
-		var final = function() { if (date == 41) {
+		var final = function(){ if (date == 41) {
 				return final = 1;}
 			    else {
 			    	return final = 0;}
 				       };
-		var division = function() { if (qzs == 0) {
+		var division = function(){ if (qzs == 0) {
 				division = 0;}
 			       else if (hws == 0) {
 			       	division = 0.15;}
