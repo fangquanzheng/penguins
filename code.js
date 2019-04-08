@@ -42,7 +42,7 @@ var getFgradeArray=function(d){
 
  var getHgradeArray=function(d,date){
 	var HgradeArray = d.map(function(student){
-		var hws = function() { if (date % 2 = 0) {
+		var hws = function() { if (date % 2 == 0) {
  			 	if (date < 30) {
 					return hws = date/2;}
 				if (date >= 30) {
