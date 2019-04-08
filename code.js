@@ -125,7 +125,7 @@ chart.selectAll("circle")
 		 .on("mouseover", function(d, i) {
 						d3.select("#tooltip")
 							.style("left", xScale(i+1) + "px")
-							.style("top", yScale(d.change) + "px")
+							.style("top", yScale(d.change) + 59 + "px")
 							.select("#value")
 							.html(d.penguin + "</br>" + d.change.toPrecision(2) + "%")
 							
