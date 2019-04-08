@@ -42,7 +42,7 @@ var getFgradeArray=function(d){
 
  var getHgradeArray=function(d,date){
 	var HgradeArray = d.map(function(student){
-		var hws =function(){ if (date % 2 == 0) {
+		var hws =function(date){ if (date % 2 == 0) {
  			 	if (date < 30) {
 					return hws = date/2;}
 				if (date >= 30) {
@@ -55,7 +55,7 @@ var getFgradeArray=function(d){
 			  	return hws = date-3/2;}
 			}
 				     };
-		var qzs =function(){ if (date < 15) {
+		var qzs =function(date){ if (date < 15) {
 				return qzs = date;}
 			  if (date >= 15 && date < 30) {
 			  	return qzs = date-1;}
@@ -64,28 +64,28 @@ var getFgradeArray=function(d){
 			  if (date == 41) {
 			  	return qzs = date-3;}
 				      };
-		var tests =function(){ if (date < 15) {
+		var tests =function(date){ if (date < 15) {
 				return tests = 0;}
 			    if (date >= 15 && date < 30) {
 			    	return tests = 1;}
 			    if (date >= 30) {
 			    	 return tests = 2;}
 					};
-		var final =function(){ if (date == 41) {
+		var final =function(date){ if (date == 41) {
 				return final = 1;}
 			    else {
 			    	return final = 0;}
 				       };
-		var division =function(){ if (qzs == 0) {
-				division = 0;}
+		var division =function(qzs,hws,tests,final){ if (qzs == 0) {
+				return division = 0;}
 			       else if (hws == 0) {
-			       	division = 0.15;}
+			       	return division = 0.15;}
 			       else if (tests == 0) {
-			       	division = 0.3;}
+			       	return division = 0.3;}
 			       else if (final == 0) {
-			        division = 0.7;}
+			        return division = 0.7;}
 			       else {
-			       	division = 1.0;}
+			       	return division = 1.0;}
 					  };
 		var hwarray = student.homework.slice(0,hws).map(function(hw){
 		 return hw.grade})
