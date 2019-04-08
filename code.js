@@ -64,7 +64,7 @@ var getFgradeArray=function(d){
 			  if (date == 41) {
 			  	return qzs = date-3;}
 				      };
-		var tests = function () { if (date < 15) {
+		var tests = function() { if (date < 15) {
 				return tests = 0;}
 			    if (date >= 15 && date < 30) {
 			    	return tests = 1;}
@@ -108,7 +108,7 @@ var getFgradeArray=function(d){
 		 return total + amount})
 		var finalgrade = (finalgrade1/(final*100))*100
 		var stugrade = (0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division
-		return stugrade}
+		return stugrade})
 	return HgradeArray 
  }
  
