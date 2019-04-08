@@ -179,7 +179,7 @@ var days=d3.range(41)
 var timeline=d3.select("body").append("svg")
 .attr('id', 'timeline')
 .attr('height', 50)
-.attr('width', 800)
+.attr('width', 1000)
 
 var daysline=timeline.append("g").attr('id', 'dayline')
 
@@ -187,7 +187,7 @@ daysline.selectAll("text").data(days)
 .enter()
 .append("text")
 .attr('x', function(d,i){
-  return i*15})
+  return i*20})
 .attr('y',25)
 .attr('id',function(d){return d+1} )
 .text(function(d){return d+1})
