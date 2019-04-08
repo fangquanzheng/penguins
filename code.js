@@ -10,6 +10,8 @@ var screen={width:660,height:420};
  var margin = {top: 20, right: 60, bottom: 40, left: 70};
  var h=screen.height-margin.top-margin.bottom
  var w=screen.width-margin.right-margin.left
+ 
+ var date = 15
 
 
 var getFgradeArray=function(d){
