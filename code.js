@@ -55,25 +55,28 @@ var getFgradeArray=function(d){
 			  	return hws = date-3/2;}
 			}
 				     };
-		var qzs = if (date < 15) {
-				qzs = date;}
+		var qzs =  function() { if (date < 15) {
+				return qzs = date;}
 			  if (date >= 15 && date < 30) {
-			  	qzs = date-1;}
+			  	return qzs = date-1;}
 			  if (date >= 30 && date < 41) {
-			  	qzs = date-2;}
+			  	return qzs = date-2;}
 			  if (date == 41) {
-			  	qzs = date-3;}
-		var tests = if (date < 15) {
-				tests = 0;}
+			  	return qzs = date-3;}
+				      };
+		var tests = function () { if (date < 15) {
+				return tests = 0;}
 			    if (date >= 15 && date < 30) {
-			    	tests = 1;}
+			    	return tests = 1;}
 			    if (date >= 30) {
-			    	tests = 2;}
-		var final = if (date == 41) {
-				final = 1;}
+			    	 return tests = 2;}
+					};
+		var final = function() { if (date == 41) {
+				return final = 1;}
 			    else {
-			    	final = 0;}
-		var division = if (qzs == 0) {
+			    	return final = 0;}
+				       };
+		var division = function() { if (qzs == 0) {
 				division = 0;}
 			       else if (hws == 0) {
 			       	division = 0.15;}
@@ -83,6 +86,7 @@ var getFgradeArray=function(d){
 			        division = 0.7;}
 			       else {
 			       	division = 1.0;}
+					  };
 		var hwarray = student.homework.slice(0,hws).map(function(hw){
 		 return hw.grade})
 		var hwgrade1 = hwarray.reduce(function(total, amount){
