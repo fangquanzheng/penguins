@@ -89,6 +89,8 @@ var getFgradeArray=function(d){
 					  };
 		var hwarray = student.homework.slice(0,hws).map(function(hw){
 		 return hw.grade})
+		console.log(hws)
+		console.log(hwarray)
 		var hwgrade1 = hwarray.reduce(function(total, amount){
 		 return total + amount})
 		var hwgrade = (hwgrade1/(hws*50))*100     
