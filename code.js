@@ -173,11 +173,28 @@ chart.selectAll("circle")
 	
 	//timeline
 
-var times=d3.range(41)
+var days=d3.range(41)
 
 
 var timeline=d3.select("body").append("svg")
 .attr('id', 'timeline')
-.attr('height', 400)
-.attr('width', 500)
+.attr('height', 50)
+.attr('width', 800)
+
+var daysline=timeline.append("g").attr('id', 'dayline')
+
+daysline.selectAll("text").data(days)
+.enter()
+.append("text")
+.attr('x', function(d,i){
+  return i*15})
+.attr('y',25)
+.attr('id',function(d){return d+1} )
+.text(function(d){return d+1})
+.on("click",function(){
+  //date change
+  var previousdate=date
+  date=parseInt(d3.select(this).attr("id").replace(/[^0-9]/ig,""))
+	
+
 }
