@@ -108,7 +108,7 @@ var getFgradeArray=function(d){
 		 return total + amount})
 		var finalgrade = (finalgrade1/(final*100))*100
 		var stugrade = (0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division
-		return stugrade})
+		return stugrade}
 	return HgradeArray 
  }
  
