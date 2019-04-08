@@ -42,18 +42,19 @@ var getFgradeArray=function(d){
 
  var getHgradeArray=function(d,date){
 	var HgradeArray = d.map(function(student){
-		var hws = if (date % 2 = 0) {
+		var hws = function() { if (date % 2 = 0) {
  			 	if (date < 30) {
-					hws = date/2;}
+					return hws = date/2;}
 				if (date >= 30) {
-					hws = date-2/2;}
+					return hws = date-2/2;}
 			}; 
 			else {
 			  if (date < 30) {
-			  	hws = date-1/2;}
+			  	return hws = date-1/2;}
 			  if (date > 30) {
-			  	hws = date-3/2;}
+			  	return hws = date-3/2;}
 			}
+				     };
 		var qzs = if (date < 15) {
 				qzs = date;}
 			  if (date >= 15 && date < 30) {
