@@ -47,7 +47,7 @@ var getFgradeArray=function(d){
 					return hws = date/2;}
 				if (date >= 30) {
 					return hws = date-2/2;}
-			}; 
+			 
 			else {
 			  if (date < 30) {
 			  	return hws = date-1/2;}
