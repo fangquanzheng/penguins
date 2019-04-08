@@ -170,4 +170,14 @@ chart.selectAll("circle")
 	.attr('id', 'Penguin')
 	.text("Penguin")
 	.style('font-size', 15)
+	
+	//timeline
+
+var times=d3.range(41)
+
+
+var timeline=d3.select("body").append("svg")
+.attr('id', 'timeline')
+.attr('height', 400)
+.attr('width', 500)
 }
