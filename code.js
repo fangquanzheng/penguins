@@ -102,15 +102,15 @@ var getFgradeArray=function(d){
 		var testgrade1 = testarray.reduce(function(total, amount){
 			 return total + amount})
 		var testgrade = (testgrade1/(tests*100))*100
-		var finalarray = student.final.slice(0,final).map(function(f){
-		 return f.grade})
+		var finalarray = student.final.slice(0,final).map(function(fin){
+		 return fin.grade})
 	 	var finalgrade1 = finalarray.reduce(function(total, amount){
 		 return total + amount})
 		var finalgrade = (finalgrade1/(final*100))*100
-		var stugrade = (0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division
-		return stugrade})
+		var stugrade = ((0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division)
+		return stugrade}
 	return HgradeArray 
- }
+ })
  
  var getGradechange=function(f,h){
 	var changearray = h.map(function(d,i){
