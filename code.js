@@ -255,6 +255,7 @@ daysline.selectAll("text").data(days)
 .attr('id',function(d){return d+1} )
 .text(function(d){return d+1})
 .on("click",function(d){
+  d3.selectAll("circle").remove()
   date=parseInt(d3.select(this).attr("id").replace(/[^0-9]/ig,""))
   console.log(date)
 		
