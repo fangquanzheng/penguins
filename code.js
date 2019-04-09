@@ -116,10 +116,10 @@ var getFgradeArray=function(d){
 			var finalgrade = (finalgrade1/(final*100))*100;}
 		else { var finalgrade = 0;}
 		var stugrade = (0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division
-		console.log(finalgrade)
-		console.log(testgrade)
-		console.log(quizgrade)
-		console.log(hwgrade)
+		console.log(final)
+		console.log(tests)
+		console.log(qzs)
+		console.log(hws)
 		return stugrade})
 	return HgradeArray 
  }
