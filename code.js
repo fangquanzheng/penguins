@@ -106,7 +106,6 @@ var getFgradeArray=function(d){
 			 return total + amount})
 			var quizgrade = (quizgrade1/(qzs*10))*100;}
 		else { var quizgrade = 0;}
-		console.log(quizgrade)
 		if (tests > 0) {
 			var testarray = student.test.slice(0,tests).map(function(t){
 			 return t.grade})
@@ -114,6 +113,7 @@ var getFgradeArray=function(d){
 			 return total + amount})
 			var testgrade = (testgrade1/(tests*100))*100;}
 		else { var testgrade = 0;}
+		console.log(testgrade)
 		if (final > 0) {
 			var finalarray = student.final.slice(0,final).map(function(fin){
 		 	return fin.grade})
