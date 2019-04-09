@@ -255,10 +255,7 @@ daysline.selectAll("text").data(days)
 .attr('id',function(d){return d+1} )
 .text(function(d){return d+1})
 .on("click",function(){
-  //date change
-  var previousdate=date
-  date=parseInt(d3.select(this).attr("id").replace(/[^0-9]/ig,""))
-  date=date
+  date=parseInt(d3.select(this))
   console.log(date)
 })
 	
