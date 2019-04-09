@@ -258,6 +258,7 @@ daysline.selectAll("text").data(days)
   //date change
   var previousdate=date
   date=parseInt(d3.select(this).attr("id").replace(/[^0-9]/ig,""))
+  date=date
   console.log(date)
 })
 	
