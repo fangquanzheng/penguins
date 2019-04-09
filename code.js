@@ -255,6 +255,7 @@ daysline.selectAll("text").data(days)
 .attr('id',function(d){return d+1} )
 .text(function(d){return d+1})
 .on("click",function(d){
+  date=15
   console.log(date)
   date=parseInt(d3.select(this))
 	
