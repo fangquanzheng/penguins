@@ -42,7 +42,6 @@ var getFgradeArray=function(d){
 
  var getHgradeArray=function(d,date){
 	var HgradeArray = d.map(function(student){
-		console.log(date)
 		var gethws =function(date){ if (date % 2 == 0) {
  			 	if (date < 30) {
 					hws = date/2;}
@@ -100,7 +99,6 @@ var getFgradeArray=function(d){
 		 	return total + amount})
 			var hwgrade = (hwgrade1/(hws*50))*100;}
 		else { hwgrade = 0;}
-		console.log(hwgrade)
 		if (qzs > 0) {
 			var quizarray = student.quizes.slice(0,qzs).map(function(quiz){
 			 return quiz.grade})  
@@ -108,6 +106,7 @@ var getFgradeArray=function(d){
 			 return total + amount})
 			var quizgrade = (quizgrade1/(qzs*10))*100;}
 		else { var quizgrade = 0;}
+		console.log(quizgrade)
 		if (tests > 0) {
 			var testarray = student.test.slice(0,tests).map(function(t){
 			 return t.grade})
