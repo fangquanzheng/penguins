@@ -99,8 +99,8 @@ var getFgradeArray=function(d){
 			var hwgrade1 = hwarray.reduce(function(total, amount){
 		 	return total + amount})
 			var hwgrade = (hwgrade1/(hws*50))*100;}
-		console.log(hwgrade)
 		else { hwgrade = 0;}
+		console.log(hwgrade)
 		if (qzs > 0) {
 			var quizarray = student.quizes.slice(0,qzs).map(function(quiz){
 			 return quiz.grade})  
