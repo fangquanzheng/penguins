@@ -47,13 +47,13 @@ var getFgradeArray=function(d){
  			 	if (date < 30) {
 					hws = date/2;}
 				if (date >= 30) {
-					hws = date-2/2;}
+					hws = (date-2)/2;}
 		}
 			else {
 			  if (date < 30) {
-			  	hws = date-1/2;}
+			  	hws = (date-1)/2;}
 			  if (date > 30) {
-			  	hws = date-3/2;}
+			  	hws = (date-3)/2;}
 			}
 			 	     return hws};
 		var getqzs =function(date){ if (date < 15) {
