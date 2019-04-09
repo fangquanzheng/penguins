@@ -95,8 +95,6 @@ var getFgradeArray=function(d){
 		var division = getdivision(date)
 		var hwarray = student.homework.slice(0,hws).map(function(hw){
 		 return hw.grade})
-		console.log(hws)
-		console.log(hwarray)
 		var hwgrade1 = hwarray.reduce(function(total, amount){
 		 return total + amount})
 		var hwgrade = (hwgrade1/(hws*50))*100     
@@ -118,6 +116,10 @@ var getFgradeArray=function(d){
 			var finalgrade = (finalgrade1/(final*100))*100;}
 		else { var finalgrade = 0;}
 		var stugrade = (0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division
+		console.log(finalgrade)
+		console.log(testgrade)
+		console.log(quizgrade)
+		console.log(hwgrade)
 		return stugrade})
 	return HgradeArray 
  }
