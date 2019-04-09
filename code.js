@@ -255,6 +255,7 @@ daysline.selectAll("text").data(days)
 .attr('id',function(d){return d+1} )
 .text(function(d){return d+1})
 .on("click",function(d){
+  console.log(date)
   date=parseInt(d3.select(this))
 	
   var getFgradeArray=function(d){
