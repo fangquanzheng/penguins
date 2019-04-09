@@ -255,10 +255,8 @@ daysline.selectAll("text").data(days)
 .attr('id',function(d){return d+1} )
 .text(function(d){return d+1})
 .on("click",function(d){
-  date=15
-  console.log(date)
   date=parseInt(d3.select(this))
-	
+  console.log(date)
   var getFgradeArray=function(d){
 	var FgradeArray = d.map(function(student){
 	 var finalarray = student.final.map(function(final){
