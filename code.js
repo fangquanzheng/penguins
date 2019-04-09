@@ -93,21 +93,27 @@ var getFgradeArray=function(d){
 		var tests = gettests(date)
 		var final = getfinal(date)
 		var division = getdivision(date)
-		var hwarray = student.homework.slice(0,hws).map(function(hw){
-		 return hw.grade})
-		var hwgrade1 = hwarray.reduce(function(total, amount){
-		 return total + amount})
-		var hwgrade = (hwgrade1/(hws*50))*100     
-		var quizarray = student.quizes.slice(0,qzs).map(function(quiz){
+		if (hws > 0) {
+			var hwarray = student.homework.slice(0,hws).map(function(hw){
+		 	return hw.grade})
+			var hwgrade1 = hwarray.reduce(function(total, amount){
+		 	return total + amount})
+			var hwgrade = (hwgrade1/(hws*50))*100;}
+		else { hwgrade = 0;}
+		if (qzs > 0) {
+			var quizarray = student.quizes.slice(0,qzs).map(function(quiz){
 			 return quiz.grade})  
-		var quizgrade1 = quizarray.reduce(function(total, amount){
+			var quizgrade1 = quizarray.reduce(function(total, amount){
 			 return total + amount})
-		var quizgrade = (quizgrade1/(qzs*10))*100
-		var testarray = student.test.slice(0,tests).map(function(t){
-			 return t.grade})  
-		var testgrade1 = testarray.reduce(function(total, amount){
+			var quizgrade = (quizgrade1/(qzs*10))*100;}
+		else { var quizgrade = 0;}
+		if (tests > 0) {
+			var testarray = student.test.slice(0,tests).map(function(t){
+			 return t.grade})
+			var testgrade1 = testarray.reduce(function(total, amount){
 			 return total + amount})
-		var testgrade = (testgrade1/(tests*100))*100
+			var testgrade = (testgrade1/(tests*100))*100;}
+		else { var testgrade = 0;}
 		if (final > 0) {
 			var finalarray = student.final.slice(0,final).map(function(fin){
 		 	return fin.grade})
@@ -116,10 +122,7 @@ var getFgradeArray=function(d){
 			var finalgrade = (finalgrade1/(final*100))*100;}
 		else { var finalgrade = 0;}
 		var stugrade = (0.3*finalgrade + 0.4*testgrade + 0.15*quizgrade + 0.15*hwgrade)/division
-		console.log(final)
-		console.log(tests)
-		console.log(qzs)
-		console.log(hws)
+		console.log(division)
 		return stugrade})
 	return HgradeArray 
  }
