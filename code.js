@@ -92,7 +92,7 @@ var getFgradeArray=function(d){
 		var qzs = getqzs(date)
 		var tests = gettests(date)
 		var final = getfinal(date)
-		var division = getdivision(date)
+		var division = getdivision(qzs,hws,tests,final)
 		if (hws > 0) {
 			var hwarray = student.homework.slice(0,hws).map(function(hw){
 		 	return hw.grade})
