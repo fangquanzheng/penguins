@@ -43,7 +43,7 @@ var getFgradeArray=function(d){
  var getHgradeArray=function(d,date){
 	var HgradeArray = d.map(function(student){
 		console.log(date)
-		var hws =function(date){ if (date % 2 == 0) {
+		var gethws =function(date){ if (date % 2 == 0) {
  			 	if (date < 30) {
 					hws = date/2;}
 				if (date >= 30) {
@@ -56,7 +56,7 @@ var getFgradeArray=function(d){
 			  	hws = date-3/2;}
 			}
 			 	     return hws};
-		var qzs =function(date){ if (date < 15) {
+		var getqzs =function(date){ if (date < 15) {
 				qzs = date;}
 			  if (date >= 15 && date < 30) {
 			  	qzs = date-1;}
@@ -65,19 +65,19 @@ var getFgradeArray=function(d){
 			  if (date == 41) {
 			  	qzs = date-3;}
 				  return qzs};
-		var tests =function(date){ if (date < 15) {
+		var gettests =function(date){ if (date < 15) {
 				tests = 0;}
 			    if (date >= 15 && date < 30) {
 			    	tests = 1;}
 			    if (date >= 30) {
 			    	 tests = 2;}
 					return tests};
-		var final =function(date){ if (date == 41) {
+		var getfinal =function(date){ if (date == 41) {
 				final = 1;}
 			    else {
 			    	final = 0;}
 				       return final};
-		var division =function(qzs,hws,tests,final){ if (qzs == 0) {
+		var getdivision =function(qzs,hws,tests,final){ if (qzs == 0) {
 				division = 0;}
 			       else if (hws == 0) {
 			       	division = 0.15;}
@@ -88,6 +88,11 @@ var getFgradeArray=function(d){
 			       else {
 			       	division = 1.0;}
 					  return division};
+		var hws = gethws(date)
+		var qzs = getqzs(date)
+		var tests = gettests(date)
+		var final = getfinal(date)
+		var division = getdivision(date)
 		var hwarray = student.homework.slice(0,hws).map(function(hw){
 		 return hw.grade})
 		console.log(hws)
